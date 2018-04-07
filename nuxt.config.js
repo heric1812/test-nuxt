@@ -35,6 +35,9 @@ module.exports = {
       }
     }
   },
+  router: {
+    base: 'https://heric1812.github.io/test-nuxt/'
+  },
   /*
   ** Fallback para GitHub
   */
