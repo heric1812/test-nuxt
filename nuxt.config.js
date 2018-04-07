@@ -34,5 +34,34 @@ module.exports = {
         })
       }
     }
+  },
+  /*
+  ** Fallback para GitHub
+  */
+  generate: {
+    fallback: true // if you want to use '404.html'
+    // fallback: 'my-fallback/file.html' // if your hosting needs a custom location
+  }
+  /*
+  ** Fallback para Firebase
+  */
+  // generate: {
+  //   fallback: true, // if you want to use '404.html'
+  //   fallback: {
+  //     "hosting": {
+  //       "public": "dist",
+  //       "ignore": [
+  //         "firebase.json",
+  //         "**/.*",
+  //         "**/node_modules/**"
+  //       ],
+  //       "rewrites": [
+  //         {
+  //           "source": "**",
+  //           "destination": "/404.html"
+  //         }
+  //       ]
+  //     }
+  //   }
   }
 }
