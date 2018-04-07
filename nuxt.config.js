@@ -36,7 +36,7 @@ module.exports = {
     }
   },
   router: {
-    base: '/',
+    // base: '/',
     mode: 'hash'
   },
   /*
