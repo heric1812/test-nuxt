@@ -36,7 +36,7 @@ module.exports = {
     }
   },
   router: {
-    mode: 'hash'
+    base: 'https://heric1812.github.io/test-nuxt/'
   }
   /*
   ** Fallback para GitHub
