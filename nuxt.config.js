@@ -10,9 +10,15 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
+  plugins: ['@/plugins/vuetify.js'],
+  css: [
+    'vuetify/dist/vuetify.min.css',
+    '@/assets/style/app.scss'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -21,6 +27,10 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: [
+      '@/plugins/vuetify.js'
+    ],
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
@@ -38,11 +48,4 @@ module.exports = {
   router: {
     base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/test-nuxt/' : '/'
   }
-  /*
-  ** Fallback para GitHub
-  */
-  // generate: {
-  //   fallback: true // if you want to use '404.html'
-  //   // fallback: 'my-fallback/file.html' // if your hosting needs a custom location
-  // }
 }
