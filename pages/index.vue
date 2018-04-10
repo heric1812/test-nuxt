@@ -1,15 +1,10 @@
 <template>
   <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">Test Nuxt</h1>
-      <h2 class="subtitle">Blog project</h2>
-      <div class="links">
-        <nuxt-link to="/about" class="button--green">About</nuxt-link>
-        <nuxt-link to="/users" class="button--green">Users</nuxt-link>
-        <nuxt-link :to="{name: 'auth-login'}" class="button--green">Login</nuxt-link>
-      </div>
-    </div>
+    <v-layout row wrap>
+      <v-flex class="text-xs-center">
+        <app-logo/>
+      </v-flex>
+    </v-layout>
   </section>
 </template>
 
@@ -17,6 +12,25 @@
 import AppLogo from '~/components/AppLogo.vue'
 
 export default {
-  components: { AppLogo }
+  components: { AppLogo },
+  head () {
+    return {
+      title: 'Blog',
+      meta: [
+        {hid: 'description', name: 'description', content: 'Listado de Post\'s publicados.'}
+      ]
+    }
+  },
+  beforeRouteEnter (to, from, next) {
+    console.log('beforeRouteEnter index', to, from)
+    console.log(to)
+    console.log(from)
+    next()
+  },
+  data () {
+    return {
+      list: []
+    }
+  }
 }
 </script>

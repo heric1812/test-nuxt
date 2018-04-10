@@ -16,7 +16,10 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "firebase": "^4.12.1",
     "nuxt": "^1.0.0",
+    "vue": "^2.5.16",
+    "vuefire": "^1.4.5",
     "vuetify": "^1.0.13"
   },
   "devDependencies": {

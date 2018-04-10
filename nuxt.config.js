@@ -15,6 +15,7 @@ module.exports = {
     ]
   },
   plugins: ['@/plugins/vuetify.js'],
+  plugins: ['@/plugins/firebase.js'],
   css: [
     'vuetify/dist/vuetify.min.css',
     '@/assets/style/app.scss'
@@ -28,7 +29,8 @@ module.exports = {
   */
   build: {
     vendor: [
-      '@/plugins/vuetify.js'
+      '@/plugins/vuetify.js',
+      '@/plugins/firebase.js'
     ],
     extractCSS: true,
     /*
