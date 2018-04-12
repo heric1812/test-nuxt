@@ -21,12 +21,6 @@ export default {
       ]
     }
   },
-  beforeRouteEnter (to, from, next) {
-    console.log('beforeRouteEnter index', to, from)
-    console.log(to)
-    console.log(from)
-    next()
-  },
   data () {
     return {
       list: []
